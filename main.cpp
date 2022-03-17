@@ -294,6 +294,11 @@ void Tests()
     cout << endl << "Enter first number  : -1.1\n";
     cout << "Enter second number : -1.2\n";
     cout << "Answer " << IfNegativeNumber(LongRealNumberComparison("-1.1", "-1.2"), "-1.1", "-1.2") << endl;
+
+    cout << endl << "Enter first number  : -.0\n";
+    cout << "Enter second number : -.0\n";
+    cout << "Answer " << IfNegativeNumber(LongRealNumberComparison("-.0", "-.0"), "-.0", "-.0") << endl;
+
 }
 
 int main(int argc, char** argv)
