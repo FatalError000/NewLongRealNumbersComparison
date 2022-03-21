@@ -94,7 +94,7 @@ string LongRealNumberComparisonInDetail(string number1part, string number2part, 
     }
     else // (part == 2)
     {
-        if (number1part.length() > number2part.length()) // ïåðâîå áîëüøåé äëèíû
+        if (number1part.length() > number2part.length()) // first number bigger
         {
             for (int i = 0; i < number2part.length(); i++)
             {
@@ -118,7 +118,7 @@ string LongRealNumberComparisonInDetail(string number1part, string number2part, 
 
             return result = "Equal";
         }
-        else if (number1part.length() < number2part.length()) // âòîðîå áîëüøåé äëèíû
+        else if (number1part.length() < number2part.length()) // second number bigger
         {
             for (int i = 0; i < number1part.length(); i++)
             {
@@ -142,7 +142,7 @@ string LongRealNumberComparisonInDetail(string number1part, string number2part, 
 
             return result = "Equal";
         }
-        else // ðàâíàÿ äëèíà
+        else // equal length
         {
             for (int i = 0; i < number1part.length(); i++)
             {
@@ -297,6 +297,10 @@ void Tests()
 
     cout << endl << "Enter first number  : -.0\n";
     cout << "Enter second number : -.0\n";
+    cout << "Answer " << IfNegativeNumber(LongRealNumberComparison("-.0", "-.0"), "-.0", "-.0") << endl;
+
+    cout << endl << "Enter first number  : -.02\n";
+    cout << "Enter second number : -.0200\n";
     cout << "Answer " << IfNegativeNumber(LongRealNumberComparison("-.0", "-.0"), "-.0", "-.0") << endl;
 
 }
