@@ -303,7 +303,7 @@ void Tests()
 
     cout << endl << "Enter first number  : -.02\n";
     cout << "Enter second number : -.0200\n";
-    cout << "Answer " << IfNegativeNumber(LongRealNumberComparison("-.0", "-.0"), "-.0", "-.0") << endl;
+    cout << "Answer " << IfNegativeNumber(LongRealNumberComparison("-.02", "-.0200"), "-.02", "-.0200") << endl;
 
     cout << endl << "Enter first number  : 0.0300\n";
     cout << "Enter second number : 0.03\n";
