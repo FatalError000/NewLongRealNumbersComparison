@@ -96,7 +96,8 @@ string LongRealNumberComparisonInDetail(string number1part, string number2part, 
     {
         if (number1part.length() > number2part.length()) // first number bigger
         {
-            for (int i = 0; i < number2part.length(); i++)
+            int i = 0;
+            for (; i < number2part.length(); i++)
             {
                 if (number1part[i] > number2part[i])
                 {
@@ -108,7 +109,7 @@ string LongRealNumberComparisonInDetail(string number1part, string number2part, 
                 }
             }
 
-            for (int i = number2part.length() - 1; i < number1part.length(); i++)
+            for (; i < number1part.length(); i++)
             {
                 if (number1part[i] > '0')
                 {
@@ -120,7 +121,8 @@ string LongRealNumberComparisonInDetail(string number1part, string number2part, 
         }
         else if (number1part.length() < number2part.length()) // second number bigger
         {
-            for (int i = 0; i < number1part.length(); i++)
+            int i = 0;
+            for (; i < number1part.length(); i++)
             {
                 if (number1part[i] > number2part[i])
                 {
@@ -132,7 +134,7 @@ string LongRealNumberComparisonInDetail(string number1part, string number2part, 
                 }
             }
 
-            for (int i = number1part.length() - 1; i < number2part.length(); i++)
+            for (; i < number2part.length(); i++)
             {
                 if (number1part[i] > '0')
                 {
@@ -302,6 +304,10 @@ void Tests()
     cout << endl << "Enter first number  : -.02\n";
     cout << "Enter second number : -.0200\n";
     cout << "Answer " << IfNegativeNumber(LongRealNumberComparison("-.0", "-.0"), "-.0", "-.0") << endl;
+
+    cout << endl << "Enter first number  : 0.0300\n";
+    cout << "Enter second number : 0.03\n";
+    cout << "Answer " << IfNegativeNumber(LongRealNumberComparison("0.0300", "0.03"), "0.0300", "0.03") << endl;
 
 }
 
